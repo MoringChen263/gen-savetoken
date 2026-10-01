@@ -1,0 +1,22 @@
+# dsh-savetoken-autolaunch bundle patch.
+#
+# A bundle patch is the plugin's "mount declaration": DSH stacks every bundle
+# layer over the base profile tree, and this file inserts the plugin row.
+#
+# The row id is the stable handle the profile patch uses to disable or
+# reconfigure it:
+#
+#   - id: savetoken-autolaunch
+#     disabled: true
+#
+- insert:
+    - id: savetoken-autolaunch
+      name: dsh-savetoken-autolaunch
+      # config:
+      #   stopTurn: true             # reject the step: no model request, 0 tokens
+      #   openBrowser: true
+      #   download: installer        # installer | none
+      #   oncePerSession: false      # true = only the first question per session
+      #   cooldownMs: 0
+      #   targetDir: ''              # default: <home>/Downloads/genshin-desktop
+      #   dryRun: false              # true = log the plan, do nothing
